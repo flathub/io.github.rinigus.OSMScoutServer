@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.OSMScoutServer",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.11",
+    "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
     "command": "osmscout-server",
     "finish-args": [
@@ -236,8 +236,7 @@
             "name": "osmscout-server",
             "buildsystem": "simple",
             "build-commands": [
-                "ln -s pro/osmscout-server_qtcontrols.pro . || true",
-                "qmake PREFIX=/app CONFIG+=\"disable_systemd\" osmscout-server_qtcontrols.pro",
+                "qmake PREFIX=/app CONFIG+=\"disable_systemd\" SCOUT_FLAVOR=kirigami osmscout-server.pro",
                 "make -j $FLATPAK_BUILDER_N_JOBS install",
                 "mkdir -p /app/share/applications",
                 "mkdir -p /app/share/appdata",
@@ -246,9 +245,8 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "ed1f4881a73157b42b02b26ecdc359f03d72335f"
+                    "type": "dir",
+                    "path": "osmscout-server"
                 }
             ]
         }
