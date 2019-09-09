@@ -151,13 +151,14 @@
                 "-DBOOST_ROOT=/app",
                 "-DENABLE_DATA_TOOLS=OFF",
                 "-DENABLE_PYTHON_BINDINGS=OFF",
-                "-DENABLE_SERVICES=OFF"
+                "-DENABLE_SERVICES=OFF",
+                "-DENABLE_NODE_BINDINGS=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/valhalla/valhalla.git",
-                    "commit": "cd178e6489a222b41023049d4205747703a529ff"
+                    "commit": "8a37731d592fa9503376ce25b7e3deaeaecaf5cc"
                 }
             ]
 
@@ -247,7 +248,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "6a669ea13bfc271272623c6544b0adaa6dbac125"
+                    "branch": "valhalla-bump",
+                    "commit": "3e528589a09e03d38562c9b7618e1f066b151c69"
                 }
             ]
         }
