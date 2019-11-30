@@ -157,8 +157,9 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/valhalla/valhalla.git",
-                    "commit": "8a37731d592fa9503376ce25b7e3deaeaecaf5cc"
+                    "url": "https://github.com/rinigus/valhalla.git",
+                    "branch": "missed_dep",
+                    "commit": "ea985fa23d75abf3cffb21ed98d73be4d9aa32b4"
                 }
             ]
 
@@ -248,7 +249,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "dd7d0f584fb738ac3813808e9385863be12735ae"
+                    "commit": "e3f404234e70066fbe8131cd41589260b3eab2af"
                 }
             ]
         }
