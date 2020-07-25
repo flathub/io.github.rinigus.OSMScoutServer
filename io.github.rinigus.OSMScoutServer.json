@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.OSMScoutServer",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.14",
     "sdk": "org.kde.Sdk",
     "command": "osmscout-server",
     "finish-args": [
@@ -195,6 +195,19 @@
             ]
         },
         {
+            "name": "python2",
+            "cleanup": [
+                "*"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://www.python.org/ftp/python/2.7.18/Python-2.7.18.tar.xz",
+                    "sha256": "b62c0e7937551d0cc02b8fd5cb0f544f9405bafc9a54d3808ed4594812edef43"
+                }
+            ]
+        },
+        {
             "name": "mapnik",
             "buildsystem": "simple",
             "build-commands": [
@@ -249,7 +262,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "17587867ff13c247a7365a5bc5cd86ed3b690e58"
+                    "commit": "f5ed52d56d757f319450e12584ee4e02f0771d6c"
                 }
             ]
         }
