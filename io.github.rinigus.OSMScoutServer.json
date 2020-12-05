@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.OSMScoutServer",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.14",
+    "runtime-version": "5.15",
     "sdk": "org.kde.Sdk",
     "command": "osmscout-server",
     "finish-args": [
@@ -262,7 +262,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "f5ed52d56d757f319450e12584ee4e02f0771d6c"
+                    "commit": "69f2358abd90932bf4b7f47eee68175981f79f0e"
                 }
             ]
         }
