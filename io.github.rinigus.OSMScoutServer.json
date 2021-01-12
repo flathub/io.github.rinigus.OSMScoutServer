@@ -158,8 +158,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/valhalla.git",
-                    "branch": "missed_dep",
-                    "commit": "ea985fa23d75abf3cffb21ed98d73be4d9aa32b4"
+                    "branch": "osmscout",
+                    "commit": "b01cd324885e58765d87535730126a58ca3773e1"
                 }
             ]
 
