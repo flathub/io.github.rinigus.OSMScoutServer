@@ -149,6 +149,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
+		"-DBUILD_SHARED_LIBS=ON",
                 "-DENABLE_DATA_TOOLS=OFF",
                 "-DENABLE_PYTHON_BINDINGS=OFF",
                 "-DENABLE_SERVICES=OFF",
@@ -159,7 +160,7 @@
                     "type": "git",
                     "url": "https://github.com/rinigus/valhalla.git",
                     "branch": "osmscout",
-                    "commit": "b01cd324885e58765d87535730126a58ca3773e1"
+                    "commit": "c1b10aa441cd01315f5002769d01ce2134c477d0"
                 }
             ]
 
