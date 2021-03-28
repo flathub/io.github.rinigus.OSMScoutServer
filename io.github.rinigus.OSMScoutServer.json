@@ -12,8 +12,7 @@
         "--socket=wayland",
         "--share=network",
         /* dbus is used to follow closure of the clients using map matching */
-        "--talk-name=org.freedesktop.DBus",
-        "--own-name=org.osm.scout.server1"
+        "--talk-name=org.freedesktop.DBus"
     ],
     "rename-icon": "osmscout-server",
     "cleanup": [
@@ -237,7 +236,8 @@
             "name": "date",
             "buildsystem": "cmake-ninja",
             "config-opts": [
-		"-DENABLE_DATE_TESTING=OFF"
+		"-DENABLE_DATE_TESTING=OFF",
+		"-DBUILD_TZ_LIB=ON"
             ],
             "sources": [
                 {
@@ -253,7 +253,7 @@
             "name": "osmscout-server",
             "buildsystem": "simple",
             "build-commands": [
-                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation VALHALLA_VERSION=3.1 osmscout-server.pro",
+                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation DBUS_SERVICE_PATH=/app/share/dbus-1/services VALHALLA_VERSION=3.1 osmscout-server.pro",
                 "make -j $FLATPAK_BUILDER_N_JOBS install",
                 "mkdir -p /app/share/applications",
                 "mkdir -p /app/share/appdata",
@@ -264,7 +264,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "dbb22ca2be7acd57dd436ea28a849966f9c1e56a"
+                    "commit": "bc42b90932231c754a8f2eb333eb826d187c68cc"
                 }
             ]
         }
