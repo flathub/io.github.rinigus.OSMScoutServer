@@ -42,23 +42,6 @@
     ],
     "modules": [
         {
-            "name": "date",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DBUILD_TZ_LIB=OFF",
-		"-DENABLE_DATE_TESTING=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/HowardHinnant/date.git",
-                    "branch": "master",
-                    "commit": "77bd6b92a4f7f6a1bbbc44952e6502a3448376b0"
-                }
-            ]
-
-        },
-        {
             "name": "marisa",
             "sources": [
                 {
@@ -251,6 +234,22 @@
             ]
         },
         {
+            "name": "date",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+		"-DENABLE_DATE_TESTING=OFF"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/HowardHinnant/date.git",
+                    "branch": "master",
+                    "commit": "77bd6b92a4f7f6a1bbbc44952e6502a3448376b0"
+                }
+            ]
+
+        },
+        {
             "name": "osmscout-server",
             "buildsystem": "simple",
             "build-commands": [
@@ -265,7 +264,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "69f2358abd90932bf4b7f47eee68175981f79f0e"
+                    "commit": "dbb22ca2be7acd57dd436ea28a849966f9c1e56a"
                 }
             ]
         }
