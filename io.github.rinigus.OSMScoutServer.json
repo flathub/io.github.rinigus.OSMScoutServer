@@ -12,8 +12,7 @@
         "--socket=wayland",
         "--share=network",
         /* dbus is used to follow closure of the clients using map matching */
-        "--talk-name=org.freedesktop.DBus",
-        "--own-name=org.osm.scout.server1"
+        "--talk-name=org.freedesktop.DBus"
     ],
     "rename-icon": "osmscout-server",
     "cleanup": [
@@ -85,39 +84,6 @@
                 }
             ]
         },
-        {
-            "name": "libosmscout",
-            "buildsystem": "cmake-ninja",
-            "config-opts": [
-                "-DBUILD_WITH_OPENMP=OFF",
-                "-DOSMSCOUT_BUILD_MAP_OPENGL=OFF",
-                "-DOSMSCOUT_BUILD_IMPORT=OFF",
-                "-DOSMSCOUT_BUILD_MAP_AGG=OFF",
-                "-DOSMSCOUT_BUILD_MAP_CAIRO=OFF",
-                "-DOSMSCOUT_BUILD_MAP_SVG=OFF",
-                "-DOSMSCOUT_BUILD_MAP_IOSX=OFF",
-                "-DOSMSCOUT_BUILD_TESTS=OFF",
-                "-DOSMSCOUT_BUILD_DEMOS=OFF",
-                "-DOSMSCOUT_BUILD_BINDING_JAVA=OFF",
-                "-DOSMSCOUT_BUILD_BINDING_CSHARP=OFF",
-                "-DOSMSCOUT_BUILD_DOC_API=OFF",
-                "-DOSMSCOUT_BUILD_CLIENT_QT=ON",
-                "-DOSMSCOUT_BUILD_TOOL_OSMSCOUT2=OFF",
-                "-DOSMSCOUT_BUILD_TOOL_STYLEEDITOR=OFF",
-                "-DGPERFTOOLS_USAGE=OFF",
-                "-DOSMSCOUT_BUILD_TOOL_IMPORT=OFF",
-                "-DOSMSCOUT_BUILD_TOOL_DUMPDATA=OFF"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/rinigus/libosmscout.git",
-                    "branch": "sailfish",
-                    "commit": "5c1e2b408e7622c341c71f913a21acf542611dd6"
-                }
-            ]
-
-        },
         "boost.json",
         "shared-modules/lua5.3/lua-5.3.5.json",
         {
@@ -153,14 +119,16 @@
                 "-DENABLE_DATA_TOOLS=OFF",
                 "-DENABLE_PYTHON_BINDINGS=OFF",
                 "-DENABLE_SERVICES=OFF",
-                "-DENABLE_NODE_BINDINGS=OFF"
+                "-DENABLE_NODE_BINDINGS=OFF",
+		"-DENABLE_TESTS=OFF",
+		"-DENABLE_WERROR=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/valhalla.git",
-                    "branch": "osmscout",
-                    "commit": "c1b10aa441cd01315f5002769d01ce2134c477d0"
+                    "branch": "osmscout-3.1",
+                    "commit": "3cedfc4bed2b9bc2cd9c337a2c2fb082e1353ff4"
                 }
             ]
 
@@ -265,10 +233,27 @@
             ]
         },
         {
+            "name": "date",
+            "buildsystem": "cmake-ninja",
+            "config-opts": [
+		"-DENABLE_DATE_TESTING=OFF",
+		"-DBUILD_TZ_LIB=ON"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/HowardHinnant/date.git",
+                    "branch": "master",
+                    "commit": "77bd6b92a4f7f6a1bbbc44952e6502a3448376b0"
+                }
+            ]
+
+        },
+        {
             "name": "osmscout-server",
             "buildsystem": "simple",
             "build-commands": [
-                "qmake PREFIX=/app CONFIG+=\"disable_systemd\" SCOUT_FLAVOR=kirigami osmscout-server.pro",
+                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation DBUS_SERVICE_PATH=/app/share/dbus-1/services VALHALLA_VERSION=3.1 osmscout-server.pro",
                 "make -j $FLATPAK_BUILDER_N_JOBS install",
                 "mkdir -p /app/share/applications",
                 "mkdir -p /app/share/appdata",
@@ -279,7 +264,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "69f2358abd90932bf4b7f47eee68175981f79f0e"
+                    "commit": "fdec8a4a1002d92c133851c3a094f04f7a5efc92"
                 }
             ]
         }
