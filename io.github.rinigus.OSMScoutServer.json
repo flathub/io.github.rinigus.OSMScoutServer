@@ -126,8 +126,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/valhalla/valhalla.git",
-                    "tag": "3.1.4"
+                    "url": "https://github.com/rinigus/valhalla.git",
+                    "commit": "a699abb80006a1ddc3067ad1cde8bc033a7e323e"
                 }
             ]
 
