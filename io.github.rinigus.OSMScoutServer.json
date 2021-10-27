@@ -137,7 +137,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.77.tar.gz",
+                    "url": "https://dbmx.net/kyotocabinet/pkg/kyotocabinet-1.2.77.tar.gz",
                     "sha256": "56899329384cc6f0f1f8aa3f1b41001071ca99c1d79225086a7f3575c0209de6"
                 }
             ]
