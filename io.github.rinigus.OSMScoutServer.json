@@ -127,8 +127,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/valhalla/valhalla.git",
-                    "branch": "master",
-                    "commit": "ac824e5ca839d36a489e7123c5ed2920ecc3d674"
+                    "tag": "3.1.4"
                 }
             ]
 
