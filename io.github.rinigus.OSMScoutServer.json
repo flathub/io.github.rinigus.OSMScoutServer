@@ -242,7 +242,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/HowardHinnant/date.git",
-                    "branch": "master",
                     "commit": "77bd6b92a4f7f6a1bbbc44952e6502a3448376b0"
                 }
             ]
