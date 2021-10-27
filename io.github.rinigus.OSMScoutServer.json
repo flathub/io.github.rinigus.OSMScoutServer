@@ -253,7 +253,7 @@
             "name": "osmscout-server",
             "buildsystem": "simple",
             "build-commands": [
-                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation DBUS_SERVICE_PATH=/app/share/dbus-1/services VALHALLA_VERSION=3.1 osmscout-server.pro",
+                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation DBUS_SERVICE_PATH=/app/share/dbus-1/services osmscout-server.pro",
                 "make -j $FLATPAK_BUILDER_N_JOBS install",
                 "mkdir -p /app/share/applications",
                 "mkdir -p /app/share/appdata",
