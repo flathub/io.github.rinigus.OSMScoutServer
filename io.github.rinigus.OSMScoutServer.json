@@ -115,7 +115,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
-		"-DBUILD_SHARED_LIBS=ON",
+		"-DBUILD_SHARED_LIBS=OFF",
                 "-DENABLE_DATA_TOOLS=OFF",
                 "-DENABLE_PYTHON_BINDINGS=OFF",
                 "-DENABLE_SERVICES=OFF",
