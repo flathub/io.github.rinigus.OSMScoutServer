@@ -119,15 +119,15 @@
                 "-DENABLE_DATA_TOOLS=OFF",
                 "-DENABLE_PYTHON_BINDINGS=OFF",
                 "-DENABLE_SERVICES=OFF",
-                "-DENABLE_NODE_BINDINGS=OFF",
 		"-DENABLE_TESTS=OFF",
-		"-DENABLE_WERROR=OFF"
+		"-DENABLE_WERROR=OFF",
+		"-DENABLE_ENABLE_SINGLE_FILES_WERROR=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/valhalla.git",
-                    "commit": "a634d2fd5760e75e618edd67d1ec77bc6e2f4754"
+                    "url": "https://github.com/valhalla/valhalla.git",
+                    "commit": "ac824e5ca839d36a489e7123c5ed2920ecc3d674"
                 }
             ]
 
