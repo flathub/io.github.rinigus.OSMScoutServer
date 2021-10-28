@@ -115,20 +115,19 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBOOST_ROOT=/app",
-		"-DBUILD_SHARED_LIBS=ON",
+		"-DBUILD_SHARED_LIBS=OFF",
                 "-DENABLE_DATA_TOOLS=OFF",
                 "-DENABLE_PYTHON_BINDINGS=OFF",
                 "-DENABLE_SERVICES=OFF",
-                "-DENABLE_NODE_BINDINGS=OFF",
 		"-DENABLE_TESTS=OFF",
-		"-DENABLE_WERROR=OFF"
+		"-DENABLE_WERROR=OFF",
+		"-DENABLE_SINGLE_FILES_WERROR=OFF"
             ],
             "sources": [
                 {
                     "type": "git",
-                    "url": "https://github.com/rinigus/valhalla.git",
-                    "branch": "osmscout-3.1",
-                    "commit": "3cedfc4bed2b9bc2cd9c337a2c2fb082e1353ff4"
+                    "url": "https://github.com/valhalla/valhalla.git",
+                    "commit": "ac824e5ca839d36a489e7123c5ed2920ecc3d674"
                 }
             ]
 
@@ -138,7 +137,7 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://fallabs.com/kyotocabinet/pkg/kyotocabinet-1.2.77.tar.gz",
+                    "url": "https://dbmx.net/kyotocabinet/pkg/kyotocabinet-1.2.77.tar.gz",
                     "sha256": "56899329384cc6f0f1f8aa3f1b41001071ca99c1d79225086a7f3575c0209de6"
                 }
             ]
@@ -243,7 +242,6 @@
                 {
                     "type": "git",
                     "url": "https://github.com/HowardHinnant/date.git",
-                    "branch": "master",
                     "commit": "77bd6b92a4f7f6a1bbbc44952e6502a3448376b0"
                 }
             ]
@@ -253,7 +251,7 @@
             "name": "osmscout-server",
             "buildsystem": "simple",
             "build-commands": [
-                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation DBUS_SERVICE_PATH=/app/share/dbus-1/services VALHALLA_VERSION=3.1 osmscout-server.pro",
+                "qmake PREFIX=/app SCOUT_FLAVOR=kirigami CONFIG+=\"disable_systemd\" CONFIG+=use_dbusactivation DBUS_SERVICE_PATH=/app/share/dbus-1/services osmscout-server.pro",
                 "make -j $FLATPAK_BUILDER_N_JOBS install",
                 "mkdir -p /app/share/applications",
                 "mkdir -p /app/share/appdata",
@@ -264,7 +262,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "1e8270bd4965e25debd72e2d0f8d02f98ea9b4ac"
+                    "commit": "53c799e4204f3f6d5c340bc96d9a6829dfaff1a0"
                 }
             ]
         }
