@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.OSMScoutServer",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
     "command": "osmscout-server",
     "finish-args": [
@@ -59,12 +59,6 @@
             ],
             "build-options": {
                 "arch": {
-                    "arm": {
-                        "config-opts": [
-                            "--disable-sse2",
-                            "--with-cflags-scanner-extra=-marm"
-                        ]
-                    },
                     "aarch64": {
                         "config-opts": [
                             "--disable-sse2"
