@@ -40,6 +40,19 @@
     ],
     "modules": [
         {
+            "name": "kyoto",
+            "config-opts": [
+                "--disable-atomic"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://dbmx.net/kyotocabinet/pkg/kyotocabinet-1.2.79.tar.gz",
+                    "sha256": "67fb1da4ae2a86f15bb9305f26caa1a7c0c27d525464c71fd732660a95ae3e1d"
+                }
+            ]
+        },
+        {
             "name": "marisa",
             "sources": [
                 {
@@ -124,16 +137,6 @@
                 }
             ]
 
-        },
-        {
-            "name": "kyoto",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://dbmx.net/kyotocabinet/pkg/kyotocabinet-1.2.79.tar.gz",
-                    "sha256": "67fb1da4ae2a86f15bb9305f26caa1a7c0c27d525464c71fd732660a95ae3e1d"
-                }
-            ]
         },
         {
             "name": "microhttp",
