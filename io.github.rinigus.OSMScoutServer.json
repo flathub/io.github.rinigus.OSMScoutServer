@@ -27,6 +27,7 @@
         "/bin/c*",
         "/bin/g*",
         "/bin/inv*",
+        "/bin/kc*",
         "/bin/libpostal_data",
         "/bin/lua",
         "/bin/luac",
