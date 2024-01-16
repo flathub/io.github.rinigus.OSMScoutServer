@@ -134,7 +134,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/valhalla/valhalla.git",
-                    "commit": "ac824e5ca839d36a489e7123c5ed2920ecc3d674"
+                    "commit": "cbabe7cfbad2225090e4c006c778f1f0a7b3ec4e"
                 }
             ]
 
@@ -259,7 +259,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "74f77151b7b27b378c73705dada5a52366a2ea9a"
+                    "commit": "f30260beb238199238ac5655ff3574206bb535a4"
                 }
             ]
         }
