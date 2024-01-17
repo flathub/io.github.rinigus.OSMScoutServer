@@ -134,7 +134,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/valhalla/valhalla.git",
-                    "commit": "cbabe7cfbad2225090e4c006c778f1f0a7b3ec4e"
+                    "commit": "0cc7d6ec7f2d7fe09600f66f99e19486faefc8dd"
                 }
             ]
 
