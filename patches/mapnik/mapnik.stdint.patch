@@ -1,0 +1,20 @@
+commit 6245113a76a073d8f98c13186380188e0b8cede6
+Author: Tom Hughes <tom@compton.nu>
+Date:   Mon Jan 23 19:01:17 2023 +0000
+
+    Include cstdint
+
+diff --git a/include/mapnik/wkb.hpp b/include/mapnik/wkb.hpp
+index fc32a9fff..a9d5deb99 100644
+--- a/include/mapnik/wkb.hpp
++++ b/include/mapnik/wkb.hpp
+@@ -28,6 +28,9 @@
+ #include <mapnik/geometry.hpp>
+ #include <mapnik/util/noncopyable.hpp>
+ 
++// stl
++#include <cstdint>
++
+ namespace mapnik
+ {
+ 

@@ -209,6 +209,14 @@
                 },
                 {
                     "type": "patch",
+                    "path": "patches/mapnik/mapnik.stdint.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/mapnik/mapnik.gcc14.patch"
+                },
+                {
+                    "type": "patch",
                     "path": "patches/mapnik/mapnik.issue3384.patch"
                 }
             ]
