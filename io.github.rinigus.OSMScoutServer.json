@@ -1,7 +1,7 @@
 {
     "app-id": "io.github.rinigus.OSMScoutServer",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-22.08",
+    "runtime-version": "5.15-23.08",
     "sdk": "org.kde.Sdk",
     "command": "osmscout-server-gui",
     "finish-args": [
@@ -134,7 +134,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/valhalla/valhalla.git",
-                    "commit": "ac824e5ca839d36a489e7123c5ed2920ecc3d674"
+                    "commit": "0cc7d6ec7f2d7fe09600f66f99e19486faefc8dd"
                 }
             ]
 
@@ -209,6 +209,14 @@
                 },
                 {
                     "type": "patch",
+                    "path": "patches/mapnik/mapnik.stdint.patch"
+                },
+                {
+                    "type": "patch",
+                    "path": "patches/mapnik/mapnik.gcc14.patch"
+                },
+                {
+                    "type": "patch",
                     "path": "patches/mapnik/mapnik.issue3384.patch"
                 }
             ]
@@ -259,7 +267,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/osmscout-server.git",
-                    "commit": "74f77151b7b27b378c73705dada5a52366a2ea9a"
+                    "commit": "8d4850484248a17fcf9f7b69c47459aafaa5d43f"
                 }
             ]
         }
