@@ -83,7 +83,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/rinigus/pkg-libpostal.git",
-                    "commit": "25099c506612b34b23b1bfe286ca6321fcf06f3"
+                    "commit": "69d0561b3d367c2db1dd7db1c4d652b865b8f83c"
                 },
                 {
                     "type": "script",
